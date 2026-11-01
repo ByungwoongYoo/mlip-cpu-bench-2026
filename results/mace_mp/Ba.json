@@ -1,0 +1,211 @@
+{
+ "solid": "Ba",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Ba",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 4.994,
+  "V_ref_per_atom": 62.2753,
+  "B_ref": 10.6,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 62.2753,
+   "volumes": [
+    58.538782,
+    59.2860856,
+    60.0333892,
+    60.7806928,
+    61.5279964,
+    62.2753,
+    63.022603600000004,
+    63.769907200000006,
+    64.5172108,
+    65.26451440000001,
+    66.011818
+   ],
+   "energies": [
+    -1.8515532696307035,
+    -1.8559562775659217,
+    -1.859256870861874,
+    -1.8614649047527059,
+    -1.8625902508094403,
+    -1.8626427657182534,
+    -1.861632329081822,
+    -1.8595689513200884,
+    -1.856462948065205,
+    -1.8523251735333663,
+    -1.847167302225234
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     4.23664,
+     4.23664,
+     4.23664,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.25459,
+     4.25459,
+     4.25459,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.2724,
+     4.2724,
+     4.2724,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.29005,
+     4.29005,
+     4.29005,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.30756,
+     4.30756,
+     4.30756,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.32493,
+     4.32493,
+     4.32493,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.34216,
+     4.34216,
+     4.34216,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.35926,
+     4.35926,
+     4.35926,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.37622,
+     4.37622,
+     4.37622,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.39305,
+     4.39305,
+     4.39305,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.40976,
+     4.40976,
+     4.40976,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 61.93882357506105,
+   "E0": -1.862758016436431,
+   "B0_GPa": 19.053942903148236,
+   "B0_prime": -0.2478360042245393,
+   "fit_rms_meV_per_atom": 0.0057609597574147745
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 61.93882357506105,
+ "B0_GPa": 19.053942903148236,
+ "V_err_pct": -0.540304783660539,
+ "a_eq_err_pct": -0.180426937564937,
+ "B_err_pct": 79.75417833158713,
+ "a_pred": 4.9849902820961685,
+ "a_err_pct": -0.1804108510979452,
+ "wall_s": 0.18700071300008858,
+ "median_fresh_singlepoint_ms": 16.408344999945257,
+ "peak_rss_mb": 612.17578125,
+ "n_volume_points": 11,
+ "model": "mace_mp",
+ "model_label": "MACE-MP-0 medium (mace-torch, 2023-12-03 checkpoint)"
+}

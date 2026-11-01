@@ -1,0 +1,211 @@
+{
+ "solid": "Nb",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Nb",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 3.3,
+  "V_ref_per_atom": 17.9685,
+  "B_ref": 173.2,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 (if 0.8<V0/Vc<1.25) else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 17.9685,
+   "volumes": [
+    16.890389999999996,
+    17.106012,
+    17.321634,
+    17.537256,
+    17.752878,
+    17.9685,
+    18.184122,
+    18.399744,
+    18.615365999999998,
+    18.830987999999998,
+    19.04661
+   ],
+   "energies": [
+    -24.6617431640625,
+    -24.678482055664062,
+    -24.691696166992188,
+    -24.702064514160156,
+    -24.709732055664062,
+    -24.714570999145508,
+    -24.716381072998047,
+    -24.715133666992188,
+    -24.71120834350586,
+    -24.70511245727539,
+    -24.696989059448242
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     2.79954,
+     2.79954,
+     2.79954,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.81141,
+     2.81141,
+     2.81141,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.82317,
+     2.82317,
+     2.82317,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.83484,
+     2.83484,
+     2.83484,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.84641,
+     2.84641,
+     2.84641,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.85788,
+     2.85788,
+     2.85788,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.86927,
+     2.86927,
+     2.86927,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.88057,
+     2.88057,
+     2.88057,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.89177,
+     2.89177,
+     2.89177,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.9029,
+     2.9029,
+     2.9029,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.91394,
+     2.91394,
+     2.91394,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 18.214798874452946,
+   "E0": -24.716106304216733,
+   "B0_GPa": 170.09106038753012,
+   "B0_prime": 1.6151888257767633,
+   "fit_rms_meV_per_atom": 0.20747959941321698
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 18.214798874452946,
+ "B0_GPa": 170.09106038753012,
+ "V_err_pct": 1.3707258505325726,
+ "a_eq_err_pct": 0.45483671596231456,
+ "B_err_pct": -1.7949997762528147,
+ "a_pred": 3.3150096116267567,
+ "a_err_pct": 0.45483671596233677,
+ "wall_s": 0.08842357100002118,
+ "median_fresh_singlepoint_ms": 7.406130998788285,
+ "peak_rss_mb": 585.90625,
+ "n_volume_points": 11,
+ "model": "chgnet_r2scan",
+ "model_label": "matgl CHGNet-PES-MatPES-r2SCAN-1M-2026.9"
+}

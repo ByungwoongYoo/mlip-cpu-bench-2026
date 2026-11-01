@@ -1,0 +1,55 @@
+{
+ "solid": "Ga",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Ga",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "LEJ14-CIF",
+  "build": "refs/lej2014/anc/Ga.cif (cell scaled isotropically to V_ref)",
+  "cubic": false,
+  "a_ref": null,
+  "V_ref_per_atom": 19.15,
+  "B_ref": 60.2,
+  "n_atoms_cif": 8,
+  "source": "LEJ14",
+  "source_detail": "Lejaeghere et al., Crit. Rev. Solid State Mater. Sci. 39, 1 (2014), arXiv:1204.2733v5 SupplMat Tab. 2.2/2.3",
+  "correction": "V0: raw exp 19.47 A3/atom - thermal dV1 0.16 - zero-point dV2 0.16 = 19.15; B0: raw exp 56.9 GPa - dB1 (-2.15) - dB2 (-1.15) = 60.2 GPa"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 (if 0.8<V0/Vc<1.25) else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "failed",
+ "passes": [],
+ "n_atoms": 8,
+ "spacegroup_ref": 64,
+ "relaxed": true,
+ "failure": "LinAlgError: SVD did not converge",
+ "traceback": "^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/optimize/optimize.py\", line 506, in run\n    return Dynamics.run(self, steps=steps)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/optimize/optimize.py\", line 375, in run\n    for converged in Dynamics.irun(self, steps=steps):\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/optimize/optimize.py\", line 344, in irun\n    self.step()\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/optimize/bfgs.py\", line 112, in step\n    optimizable.set_x(pos + dpos)\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/filters.py\", line 28, in set_x\n    self.filterobj.set_positions(x.reshape(-1, 3))\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/filters.py\", line 595, in set_positions\n    self._utility.set_positions_frechet(\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/_4/optimize/cellutil.py\", line 118, in set_positions_frechet\n    self.set_positions_unitcellfilter(\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/_4/optimize/cellutil.py\", line 88, in set_positions_unitcellfilter\n    atoms.set_positions(\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/atoms.py\", line 231, in set_positions\n    constraint.adjust_positions(self, newpositions)\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/constraints/fix_symmetry.py\", line 84, in adjust_positions\n    atoms.cell.reciprocal().T,\n    ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/ase/cell.py\", line 290, in reciprocal\n    icell = Cell(np.linalg.pinv(self).transpose())\n                 ^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/numpy/linalg/_linalg.py\", line 2273, in pinv\n    u, s, vt = svd(a, full_matrices=False, hermitian=hermitian)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/numpy/linalg/_linalg.py\", line 1840, in svd\n    u, s, vh = gufunc(a, signature=signature)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/matgl/lib/python3.12/site-packages/numpy/linalg/_linalg.py\", line 153, in _raise_linalgerror_svd_nonconvergence\n    raise LinAlgError(\"SVD did not converge\")\nnumpy.linalg.LinAlgError: SVD did not converge\n",
+ "wall_s": 121.64966472299966,
+ "median_fresh_singlepoint_ms": 20.060839000507258,
+ "peak_rss_mb": 755.49609375,
+ "n_volume_points": 2,
+ "model": "chgnet_r2scan",
+ "model_label": "matgl CHGNet-PES-MatPES-r2SCAN-1M-2026.9"
+}

@@ -1,0 +1,211 @@
+{
+ "solid": "Li",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Li",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 3.443,
+  "V_ref_per_atom": 20.4071,
+  "B_ref": 13.1,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 20.4071,
+   "volumes": [
+    19.182674,
+    19.427559199999997,
+    19.6724444,
+    19.9173296,
+    20.1622148,
+    20.4071,
+    20.6519852,
+    20.8968704,
+    21.1417556,
+    21.386640800000002,
+    21.631526
+   ],
+   "energies": [
+    -1.8993829488754272,
+    -1.900513768196106,
+    -1.9013878107070923,
+    -1.9020262956619263,
+    -1.9024537801742554,
+    -1.9026824235916138,
+    -1.9027427434921265,
+    -1.902635931968689,
+    -1.9023815393447876,
+    -1.9019674062728882,
+    -1.9013859033584595
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     2.92086,
+     2.92086,
+     2.92086,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.93323,
+     2.93323,
+     2.93323,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.94551,
+     2.94551,
+     2.94551,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.95768,
+     2.95768,
+     2.95768,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.96975,
+     2.96975,
+     2.96975,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.98173,
+     2.98173,
+     2.98173,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.99361,
+     2.99361,
+     2.99361,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.00539,
+     3.00539,
+     3.00539,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.01709,
+     3.01709,
+     3.01709,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.02869,
+     3.02869,
+     3.02869,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.04021,
+     3.04021,
+     3.04021,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 20.607932421313983,
+   "E0": -1.9027537626156852,
+   "B0_GPa": 9.427752010981584,
+   "B0_prime": 5.194975328897718,
+   "fit_rms_meV_per_atom": 0.00993832124472395
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 20.607932421313983,
+ "B0_GPa": 9.427752010981584,
+ "V_err_pct": 0.9841301376186884,
+ "a_eq_err_pct": 0.3269730998872511,
+ "B_err_pct": -28.032427397087144,
+ "a_pred": 3.454258267604523,
+ "a_err_pct": 0.32699005531580116,
+ "wall_s": 5.0941764210001566,
+ "median_fresh_singlepoint_ms": 419.6631150007306,
+ "peak_rss_mb": 1436.62890625,
+ "n_volume_points": 11,
+ "model": "prophet",
+ "model_label": "Prophet OAME-MBD (KairosCalculator)"
+}

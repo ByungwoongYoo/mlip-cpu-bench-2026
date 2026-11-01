@@ -1,0 +1,14 @@
+venvs/
+models/
+logs/*.log
+refs/lattice_constants.csv
+refs/bulk_moduli.csv
+refs/cohesive_energies.csv
+refs/lej2014/
+refs/*.pdf
+refs/*.txt
+refs/*.html
+__pycache__/
+*.pyc
+*.orig
+.DS_Store

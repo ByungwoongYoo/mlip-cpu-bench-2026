@@ -1,0 +1,212 @@
+{
+ "solid": "Pb",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Pb",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "LEJ14-CIF cubic conv. cell (4 atoms)",
+  "build": "refs/lej2014/anc/Pb.cif (cell scaled isotropically to V_ref)",
+  "cubic": true,
+  "a_ref": 4.9247,
+  "V_ref_per_atom": 29.86,
+  "B_ref": 46.3,
+  "n_atoms_cif": 4,
+  "source": "LEJ14",
+  "source_detail": "Lejaeghere et al., Crit. Rev. Solid State Mater. Sci. 39, 1 (2014), arXiv:1204.2733v5 SupplMat Tab. 2.2/2.3",
+  "correction": "V0: raw exp 30.34 A3/atom - thermal dV1 0.39 - zero-point dV2 0.08 = 29.86; B0: raw exp 43.0 GPa - dB1 (-2.98) - dB2 (-0.36) = 46.3 GPa"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 119.44,
+   "volumes": [
+    112.27359999999999,
+    113.70688,
+    115.14016,
+    116.57343999999999,
+    118.00672,
+    119.44,
+    120.87328,
+    122.30656,
+    123.73984,
+    125.17312,
+    126.60640000000001
+   ],
+   "energies": [
+    -15.252753019332886,
+    -15.284809708595276,
+    -15.31016480922699,
+    -15.329265117645264,
+    -15.34248149394989,
+    -15.350198030471802,
+    -15.352727890014648,
+    -15.350366592407227,
+    -15.34340238571167,
+    -15.332046747207642,
+    -15.31651258468628
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     4.82421,
+     4.82421,
+     4.82421,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.84465,
+     4.84465,
+     4.84465,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.86492,
+     4.86492,
+     4.86492,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.88502,
+     4.88502,
+     4.88502,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.90496,
+     4.90496,
+     4.90496,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.92474,
+     4.92474,
+     4.92474,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.94436,
+     4.94436,
+     4.94436,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.96383,
+     4.96383,
+     4.96383,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     4.98314,
+     4.98314,
+     4.98314,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     5.00231,
+     5.00231,
+     5.00231,
+     90.0,
+     90.0,
+     90.0
+    ],
+    [
+     5.02133,
+     5.02133,
+     5.02133,
+     90.0,
+     90.0,
+     90.0
+    ]
+   ],
+   "V0": 120.87838175426783,
+   "E0": -15.352749374960952,
+   "B0_GPa": 46.19545053321076,
+   "B0_prime": 4.04688427047052,
+   "fit_rms_meV_per_atom": 0.007724515433058918
+  }
+ ],
+ "n_atoms": 4,
+ "spacegroup_ref": 225,
+ "relaxed": true,
+ "V0_per_atom": 30.21959543856696,
+ "B0_GPa": 46.19545053321076,
+ "V_err_pct": 1.204271395066847,
+ "a_eq_err_pct": 0.39982308287569435,
+ "B_err_pct": -0.2258087835620648,
+ "a_pred": 4.944429767968542,
+ "a_err_pct": 0.4006288295437699,
+ "wall_s": 5.9060095389977505,
+ "median_fresh_singlepoint_ms": 189.0734210028313,
+ "peak_rss_mb": 496.72265625,
+ "n_volume_points": 11,
+ "model": "flashcart_mad",
+ "model_label": "FlashCart MAD (seed 0)"
+}

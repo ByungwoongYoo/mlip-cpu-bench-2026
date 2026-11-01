@@ -1,0 +1,528 @@
+{
+ "common_subset": [
+  "Ag",
+  "Al",
+  "AlAs",
+  "AlN",
+  "AlP",
+  "Au",
+  "BN",
+  "BP",
+  "Be",
+  "Bi",
+  "C",
+  "Ca",
+  "Cd",
+  "Co",
+  "Cr",
+  "Cu",
+  "GaAs",
+  "GaN",
+  "GaP",
+  "Ge",
+  "Hf",
+  "In",
+  "InAs",
+  "InP",
+  "InSb",
+  "Ir",
+  "K",
+  "Li",
+  "LiCl",
+  "LiF",
+  "LiH",
+  "Lu",
+  "Mg",
+  "MgO",
+  "Mo",
+  "Na",
+  "NaCl",
+  "NaF",
+  "Nb",
+  "Ni",
+  "Os",
+  "Pb",
+  "Pd",
+  "Pt",
+  "Rb",
+  "Re",
+  "Rh",
+  "Ru",
+  "Sb",
+  "Sc",
+  "Si",
+  "SiC",
+  "Sn",
+  "Sr",
+  "Ta",
+  "Tc",
+  "Ti",
+  "Tl",
+  "V",
+  "W",
+  "Y",
+  "Zr"
+ ],
+ "n_common": 62,
+ "models": {
+  "chgnet_r2scan": {
+   "label": "CHGNet-r2SCAN-2026.9",
+   "n_attempted": 70,
+   "n_ok": 66,
+   "failures": [
+    [
+     "B",
+     "V0 outside sampled range; B0 non-positive/non-finite"
+    ],
+    [
+     "Cs",
+     "V0 outside sampled range"
+    ],
+    [
+     "Ga",
+     "LinAlgError: SVD did not converge"
+    ],
+    [
+     "Po",
+     "KeyError: 'Po'"
+    ]
+   ],
+   "warnings": [
+    [
+     "B",
+     "some constant-volume relaxations hit max_steps"
+    ],
+    [
+     "Hf",
+     "some constant-volume relaxations hit max_steps"
+    ],
+    [
+     "Lu",
+     "some constant-volume relaxations hit max_steps"
+    ],
+    [
+     "Tc",
+     "some constant-volume relaxations hit max_steps"
+    ],
+    [
+     "Y",
+     "some constant-volume relaxations hit max_steps"
+    ],
+    [
+     "Zr",
+     "some constant-volume relaxations hit max_steps"
+    ]
+   ],
+   "MAPE_a_eq_all": 0.7561512819727225,
+   "ME_a_eq_all": 0.27263148475740506,
+   "MAPE_B_all": 24.50159660021812,
+   "ME_B_all": 10.080471479644633,
+   "MAPE_a_eq_common": 0.6949756116320859,
+   "MAPE_B_common": 23.580411388665322,
+   "MAPE_a_cubic": 0.6742260303518246,
+   "MAPE_V_all": 2.2815376039748263,
+   "MAPE_a_eq_nonmagnetic": 0.734706119137059,
+   "MAPE_B_nonmagnetic": 25.11439949997044,
+   "by_class": {
+    "metal": {
+     "n": 38,
+     "MAPE_a_eq": 0.7784771249725881,
+     "MAPE_B": 19.20002161377763,
+     "ME_a_eq": 0.2701184563716684
+    },
+    "semiconductor": {
+     "n": 16,
+     "MAPE_a_eq": 0.5409249065006894,
+     "MAPE_B": 21.505403545509594,
+     "ME_a_eq": 0.28294631822941285
+    },
+    "ionic": {
+     "n": 6,
+     "MAPE_a_eq": 0.4391886941004619,
+     "MAPE_B": 11.855588332221025,
+     "ME_a_eq": 0.2905474182540631
+    },
+    "semimetal": {
+     "n": 2,
+     "MAPE_a_eq": 1.108213251808593,
+     "MAPE_B": 158.58234902611042,
+     "ME_a_eq": -0.7293966609969671
+    }
+   },
+   "oxide_MgO": {
+    "a_err": 0.3083044293997972,
+    "B_err": -3.5132076904045184
+   },
+   "max_abs_a_eq": [
+    "As",
+    4.057138937201787
+   ],
+   "max_abs_B": [
+    "Sb",
+    201.2593890628143
+   ],
+   "n_failed": 4,
+   "n_no_result": 0,
+   "ME_a_eq_common": 0.2431634455052331,
+   "ME_B_common": 11.692294289240154,
+   "wall_common_s": 468.60837031401206,
+   "wall_total_s": 1872.62527082001,
+   "wall_median_s": 0.19635616100094921,
+   "wall_median_cubic_s": 0.10701529400012078,
+   "wall_median_noncubic_s": 15.320836455000062,
+   "wall_max": [
+    "B",
+    1124.5438630200006
+   ],
+   "singlepoint_median_ms": 8.595964000051026,
+   "peak_rss_per_structure_median_mb": 600.212890625,
+   "peak_rss_per_structure_max_mb": 965.640625,
+   "load": {
+    "load_s": 3.938031781000973,
+    "rss_after_load_mb": 482.78515625,
+    "rss_before_load_mb": 222.01171875
+   },
+   "job_res": "name=chgnet_r2scan rc=0 wall_s=1927 peak_rss_mb=923 cores=6,7 finished=2026-11-01 23:05:22 KST"
+  },
+  "pet_mad_s": {
+   "label": "PET-MAD-s",
+   "n_attempted": 70,
+   "n_ok": 68,
+   "failures": [
+    [
+     "As",
+     "V0 outside sampled range"
+    ],
+    [
+     "Zn",
+     "B0 non-positive/non-finite"
+    ]
+   ],
+   "warnings": [],
+   "MAPE_a_eq_all": 0.8337322093407874,
+   "ME_a_eq_all": 0.4145077909480422,
+   "MAPE_B_all": 16.403692964523664,
+   "ME_B_all": -10.500380786034944,
+   "MAPE_a_eq_common": 0.7964116647614055,
+   "MAPE_B_common": 15.349464629216003,
+   "MAPE_a_cubic": 0.8122309051170219,
+   "MAPE_V_all": 2.507596672091759,
+   "MAPE_a_eq_nonmagnetic": 0.7244158086178631,
+   "MAPE_B_nonmagnetic": 15.986797967545613,
+   "by_class": {
+    "metal": {
+     "n": 38,
+     "MAPE_a_eq": 0.8693620245257011,
+     "MAPE_B": 18.493680358281193,
+     "ME_a_eq": 0.3831629377060813
+    },
+    "semiconductor": {
+     "n": 16,
+     "MAPE_a_eq": 0.5582864459384357,
+     "MAPE_B": 10.570339852922492,
+     "ME_a_eq": 0.5268466858906584
+    },
+    "ionic": {
+     "n": 6,
+     "MAPE_a_eq": 0.6087840603651936,
+     "MAPE_B": 5.579090362916692,
+     "ME_a_eq": 0.6087840603651936
+    },
+    "semimetal": {
+     "n": 2,
+     "MAPE_a_eq": 1.8782393930121821,
+     "MAPE_B": 23.15348678622332,
+     "ME_a_eq": 1.8782393930121821
+    }
+   },
+   "oxide_MgO": {
+    "a_err": 0.3275973803499088,
+    "B_err": -4.711718038456425
+   },
+   "max_abs_a_eq": [
+    "Fe",
+    -4.546503591286877
+   ],
+   "max_abs_B": [
+    "Po",
+    64.22352693033815
+   ],
+   "n_failed": 2,
+   "n_no_result": 0,
+   "ME_a_eq_common": 0.4903051896015669,
+   "ME_B_common": -12.320002049639331,
+   "wall_common_s": 211.09114120500453,
+   "wall_total_s": 342.3566737470064,
+   "wall_median_s": 0.36479126250014815,
+   "wall_median_cubic_s": 0.2970215150007789,
+   "wall_median_noncubic_s": 9.472571514000265,
+   "wall_max": [
+    "As",
+    55.7824699899993
+   ],
+   "singlepoint_median_ms": 24.323317000380484,
+   "peak_rss_per_structure_median_mb": 928.23828125,
+   "peak_rss_per_structure_max_mb": 973.203125,
+   "load": {
+    "load_s": 6.645066000000952,
+    "rss_after_load_mb": 754.6640625,
+    "rss_before_load_mb": 218.87109375
+   },
+   "job_res": "name=pet_mad_s rc=0 wall_s=362 peak_rss_mb=973 cores=6,7 finished=2026-11-01 23:19:23 KST"
+  },
+  "prophet": {
+   "label": "Prophet-OAME-MBD",
+   "n_attempted": 70,
+   "n_ok": 69,
+   "failures": [
+    [
+     "Po",
+     "KeyError: np.int64(84)"
+    ]
+   ],
+   "warnings": [],
+   "MAPE_a_eq_all": 1.1439136677381048,
+   "ME_a_eq_all": 1.0445120574399378,
+   "MAPE_B_all": 21.25038022228257,
+   "ME_B_all": -10.107073485134016,
+   "MAPE_a_eq_common": 1.1494943065656247,
+   "MAPE_B_common": 20.87506689926854,
+   "MAPE_a_cubic": 1.1358799489052769,
+   "MAPE_V_all": 3.4885573264717586,
+   "MAPE_a_eq_nonmagnetic": 1.186818222043117,
+   "MAPE_B_nonmagnetic": 18.160586937343314,
+   "by_class": {
+    "metal": {
+     "n": 38,
+     "MAPE_a_eq": 0.9446154325752737,
+     "MAPE_B": 22.26747223019397,
+     "ME_a_eq": 0.7838450922476138
+    },
+    "semiconductor": {
+     "n": 16,
+     "MAPE_a_eq": 1.3786835492234681,
+     "MAPE_B": 11.959903484455605,
+     "ME_a_eq": 1.3786835492234681
+    },
+    "ionic": {
+     "n": 6,
+     "MAPE_a_eq": 1.4350740997373028,
+     "MAPE_B": 30.57392484912783,
+     "ME_a_eq": 1.4350740997373028
+    },
+    "semimetal": {
+     "n": 2,
+     "MAPE_a_eq": 2.3519395916045127,
+     "MAPE_B": 36.644099080611,
+     "ME_a_eq": 2.3519395916045127
+    }
+   },
+   "oxide_MgO": {
+    "a_err": 1.6310399255568653,
+    "B_err": 3.5276659465198312
+   },
+   "max_abs_a_eq": [
+    "Tl",
+    3.6390891502335876
+   ],
+   "max_abs_B": [
+    "Co",
+    230.9627199919595
+   ],
+   "n_failed": 1,
+   "n_no_result": 0,
+   "ME_a_eq_common": 1.050957646364801,
+   "ME_B_common": -10.223777939767933,
+   "wall_common_s": 2188.6958062050053,
+   "wall_total_s": 4874.40759695501,
+   "wall_median_s": 12.705784621500243,
+   "wall_median_cubic_s": 9.645776227999704,
+   "wall_median_noncubic_s": 78.99224507649888,
+   "wall_max": [
+    "B",
+    1207.185206233
+   ],
+   "singlepoint_median_ms": 554.3000539983041,
+   "peak_rss_per_structure_median_mb": 1436.6328125,
+   "peak_rss_per_structure_max_mb": 3496.79296875,
+   "load": {
+    "load_s": 6.842877777999092,
+    "rss_after_load_mb": 922.9375,
+    "rss_before_load_mb": 223.4921875
+   },
+   "job_res": "name=prophet rc=137 wall_s=586 peak_rss_mb=3048 cores=6,7 finished=2026-11-01 23:29:09 KST\nname=prophet__As rc=0 wall_s=548 peak_rss_mb=1455 cores=6,7 finished=2026-11-02 00:37:40 KST\nname=prophet__B rc=0 wall_s=1247 peak_rss_mb=3381 cores=6,7 finished=2026-11-02 01:44:35 KST\nname=prophet__Bi rc=0 wall_s=240 peak_rss_mb=1191 cores=6,7 finished=2026-11-02 00:53:56 KST\nname=prophet__Cd rc=0 wall_s=101 peak_rss_mb=1109 cores=6,7 finished=2026-11-02 01:15:15 KST\nname=prophet__Co rc=0 wall_s=138 peak_rss_mb=1243 cores=6,7 finished=2026-11-02 01:05:16 KST\nname=prophet__Cr rc=0 wall_s=367 peak_rss_mb=1227 cores=6,7 finished=2026-11-02 01:02:31 KST\nname=prophet__Fe rc=0 wall_s=27 peak_rss_mb=1229 cores=6,7 finished=2026-11-02 01:02:58 KST\nname=prophet__Ga rc=0 wall_s=849 peak_rss_mb=1632 cores=6,7 finished=2026-11-02 00:28:27 KST\nname=prophet__Hf rc=0 wall_s=48 peak_rss_mb=1089 cores=6,7 finished=2026-11-02 01:18:45 KST\nname=prophet__In rc=0 wall_s=89 peak_rss_mb=1340 cores=6,7 finished=2026-11-02 01:16:44 KST\nname=prophet__Lu rc=0 wall_s=73 peak_rss_mb=1077 cores=6,7 finished=2026-11-02 01:17:57 KST\nname=prophet__Mg rc=0 wall_s=54 peak_rss_mb=1095 cores=6,7 finished=2026-11-02 00:54:50 KST\nname=prophet__Os rc=0 wall_s=98 peak_rss_mb=1191 cores=6,7 finished=2026-11-02 01:22:09 KST\nname=prophet__Pb rc=0 wall_s=25 peak_rss_mb=1242 cores=6,7 finished=2026-11-02 00:14:18 KST\nname=prophet__Po rc=0 wall_s=9 peak_rss_mb=1309 cores=6,7 finished=2026-11-02 01:23:48 KST\nname=prophet__Re rc=0 wall_s=106 peak_rss_mb=1201 cores=6,7 finished=2026-11-02 01:20:31 KST\nname=prophet__Ru rc=0 wall_s=162 peak_rss_mb=1234 cores=6,7 finished=2026-11-02 01:13:34 KST\nname=prophet__Sb rc=0 wall_s=735 peak_rss_mb=1278 cores=6,7 finished=2026-11-02 00:49:56 KST\nname=prophet__Sc rc=0 wall_s=38 peak_rss_mb=1278 cores=6,7 finished=2026-11-02 00:55:28 KST\nname=prophet__Tc rc=0 wall_s=59 peak_rss_mb=1186 cores=6,7 finished=2026-11-02 01:10:52 KST\nname=prophet__Ti rc=0 wall_s=56 peak_rss_mb=1156 cores=6,7 finished=2026-11-02 00:56:24 KST\nname=prophet__Tl rc=0 wall_s=90 peak_rss_mb=1083 cores=6,7 finished=2026-11-02 01:23:39 KST\nname=prophet__Y rc=0 wall_s=59 peak_rss_mb=1395 cores=6,7 finished=2026-11-02 01:08:47 KST\nname=prophet__Zn rc=0 wall_s=152 peak_rss_mb=1181 cores=6,7 finished=2026-11-02 01:07:48 KST\nname=prophet__Zr rc=0 wall_s=66 peak_rss_mb=1159 cores=6,7 finished=2026-11-02 01:09:53 KST"
+  },
+  "mace_mp": {
+   "label": "MACE-MP-0 medium",
+   "n_attempted": 70,
+   "n_ok": 69,
+   "failures": [
+    [
+     "Po",
+     "ValueError: np.int64(84) is not in list"
+    ]
+   ],
+   "warnings": [],
+   "MAPE_a_eq_all": 1.240095954415797,
+   "ME_a_eq_all": 1.0770922816537816,
+   "MAPE_B_all": 18.08242313770834,
+   "ME_B_all": -6.750086667687554,
+   "MAPE_a_eq_common": 1.2141929590458551,
+   "MAPE_B_common": 15.848413791707626,
+   "MAPE_a_cubic": 1.2620961297966966,
+   "MAPE_V_all": 3.791898458512059,
+   "MAPE_a_eq_nonmagnetic": 1.3047964676811101,
+   "MAPE_B_nonmagnetic": 17.62188047109323,
+   "by_class": {
+    "metal": {
+     "n": 38,
+     "MAPE_a_eq": 1.0890965947485558,
+     "MAPE_B": 15.679965112927693,
+     "ME_a_eq": 0.8060846615576961
+    },
+    "semiconductor": {
+     "n": 16,
+     "MAPE_a_eq": 1.3259356894035608,
+     "MAPE_B": 14.556317343545487,
+     "ME_a_eq": 1.3259356894035608
+    },
+    "ionic": {
+     "n": 6,
+     "MAPE_a_eq": 1.9097553176089115,
+     "MAPE_B": 16.643275249622143,
+     "ME_a_eq": 1.9097553176089115
+    },
+    "semimetal": {
+     "n": 2,
+     "MAPE_a_eq": 0.6103949621437232,
+     "MAPE_B": 27.001125900079835,
+     "ME_a_eq": 0.6103949621437232
+    }
+   },
+   "oxide_MgO": {
+    "a_err": 1.5642191646089376,
+    "B_err": -13.275073269330873
+   },
+   "max_abs_a_eq": [
+    "As",
+    4.925300803348942
+   ],
+   "max_abs_B": [
+    "Ba",
+    79.75417833158713
+   ],
+   "n_failed": 1,
+   "n_no_result": 0,
+   "ME_a_eq_common": 1.040734032251457,
+   "ME_B_common": -6.575054876456877,
+   "wall_common_s": 210.77118630700352,
+   "wall_total_s": 463.91078988900153,
+   "wall_median_s": 0.5996217034999063,
+   "wall_median_cubic_s": 0.45732921900071233,
+   "wall_median_noncubic_s": 6.656364025499897,
+   "wall_max": [
+    "Ga",
+    101.0894743079989
+   ],
+   "singlepoint_median_ms": 29.079333999106893,
+   "peak_rss_per_structure_median_mb": 612.171875,
+   "peak_rss_per_structure_max_mb": 891.77734375,
+   "load": {
+    "load_s": 3.3452121620011894,
+    "rss_after_load_mb": 491.24609375,
+    "rss_before_load_mb": 222.3828125
+   },
+   "job_res": "name=mace_mp rc=0 wall_s=479 peak_rss_mb=876 cores=6,7 finished=2026-11-01 23:13:21 KST"
+  },
+  "flashcart_mad": {
+   "label": "FlashCart-MAD",
+   "n_attempted": 70,
+   "n_ok": 67,
+   "failures": [
+    [
+     "Ba",
+     "V0 outside sampled range"
+    ],
+    [
+     "Cs",
+     "RuntimeError: cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous"
+    ],
+    [
+     "Fe",
+     "V0 outside sampled range; B0 non-positive/non-finite"
+    ]
+   ],
+   "warnings": [],
+   "MAPE_a_eq_all": 1.5480299355144354,
+   "ME_a_eq_all": -1.3434238076210951,
+   "MAPE_B_all": 37.90086659990204,
+   "ME_B_all": 31.616239067634627,
+   "MAPE_a_eq_common": 1.547321291195625,
+   "MAPE_B_common": 38.60397158352241,
+   "MAPE_a_cubic": 1.3368599595212232,
+   "MAPE_V_all": 4.5207883849934065,
+   "MAPE_a_eq_nonmagnetic": 1.4563037980710676,
+   "MAPE_B_nonmagnetic": 36.41802663818976,
+   "by_class": {
+    "metal": {
+     "n": 38,
+     "MAPE_a_eq": 2.147674384709441,
+     "MAPE_B": 57.51973220622735,
+     "ME_a_eq": -2.0678280409861074
+    },
+    "semiconductor": {
+     "n": 16,
+     "MAPE_a_eq": 0.40689591550925264,
+     "MAPE_B": 6.67708270998845,
+     "ME_a_eq": -0.20651881374649447
+    },
+    "ionic": {
+     "n": 6,
+     "MAPE_a_eq": 1.0902535769088413,
+     "MAPE_B": 10.440217905253645,
+     "ME_a_eq": 0.1544824029516593
+    },
+    "semimetal": {
+     "n": 2,
+     "MAPE_a_eq": 0.6352186627844536,
+     "MAPE_B": 19.11089177520646,
+     "ME_a_eq": -0.6352186627844536
+    }
+   },
+   "oxide_MgO": {
+    "a_err": 0.6221409706333558,
+    "B_err": -1.8503704409858934
+   },
+   "max_abs_a_eq": [
+    "Sr",
+    -5.993586856721455
+   ],
+   "max_abs_B": [
+    "K",
+    499.0033018620865
+   ],
+   "n_failed": 3,
+   "n_no_result": 0,
+   "ME_a_eq_common": -1.326214669117338,
+   "ME_B_common": 32.05080061338975,
+   "wall_common_s": 1374.6660769230057,
+   "wall_total_s": 2275.868155952001,
+   "wall_median_s": 0.5731268999998065,
+   "wall_median_cubic_s": 0.46743795499969565,
+   "wall_median_noncubic_s": 77.42430784300086,
+   "wall_max": [
+    "B",
+    482.4925087299998
+   ],
+   "singlepoint_median_ms": 155.88641400063352,
+   "peak_rss_per_structure_median_mb": 487.078125,
+   "peak_rss_per_structure_max_mb": 715.4296875,
+   "load": {
+    "load_s": 2.898195542000394,
+    "rss_after_load_mb": 423.15625,
+    "rss_before_load_mb": 222.1015625
+   },
+   "job_res": "name=flashcart_mad rc=0 wall_s=2524 peak_rss_mb=713 cores=6,7 finished=2026-11-02 00:11:13 KST"
+  }
+ }
+}

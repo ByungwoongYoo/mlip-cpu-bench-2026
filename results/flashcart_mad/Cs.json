@@ -1,0 +1,55 @@
+{
+ "solid": "Cs",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Cs",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 6.043,
+  "V_ref_per_atom": 110.3387,
+  "B_ref": 2.3,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "failed",
+ "passes": [],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "failure": "RuntimeError: cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+ "traceback": "line 284, in _predict_impl\n    node_energies = self(graph_dict)\n                    ^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1787, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1798, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/flashcart/model/flashcart.py\", line 294, in forward\n    interaction_feats = interaction(\n                        ^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1787, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1798, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/flashcart/nn/layers.py\", line 364, in forward\n    aggregated = self.tp(node_feats, edge_attrs, weights, idx_i, idx_j)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1787, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1798, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/flashcart/o3/tensor_product.py\", line 155, in forward\n    return py_tensor_product(\n           ^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/flashcart/lib/python3.12/site-packages/flashcart/o3/_tensor_product.py\", line 1340, in py_tensor_product\n    return _PY_TENSOR_PRODUCT_FORWARD_MODULE.py_tensor_product_forward(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"~/.cache/flashcart/_py_tensor_product_forward_1aacf8fae2368be9f4c6c257.py\", line 404, in py_tensor_product_forward\n    out_flats.append(bucket[0].reshape(n_batch, -1))\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous\n",
+ "wall_s": 0.05047703200034448,
+ "median_fresh_singlepoint_ms": null,
+ "singlepoint_error": "cannot reshape tensor of 0 elements into shape [0, -1] because the unspecified dimension size -1 can be any value and is ambiguous",
+ "peak_rss_mb": 486.84765625,
+ "n_volume_points": 0,
+ "model": "flashcart_mad",
+ "model_label": "FlashCart MAD (seed 0)"
+}

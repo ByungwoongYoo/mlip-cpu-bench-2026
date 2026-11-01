@@ -1,0 +1,211 @@
+{
+ "solid": "C",
+ "cls": "semiconductor",
+ "oxide": false,
+ "ref": {
+  "name": "C",
+  "cls": "semiconductor",
+  "oxide": false,
+  "structure": "diamond",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 3.553,
+  "V_ref_per_atom": 5.6065,
+  "B_ref": 454.7,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 11.213,
+   "volumes": [
+    10.540219999999998,
+    10.674776,
+    10.809332,
+    10.943888,
+    11.078444,
+    11.213,
+    11.347555999999999,
+    11.482111999999999,
+    11.616667999999999,
+    11.751223999999999,
+    11.88578
+   ],
+   "energies": [
+    -18.086078643798828,
+    -18.11739730834961,
+    -18.14257049560547,
+    -18.162063598632812,
+    -18.17632293701172,
+    -18.18571662902832,
+    -18.190441131591797,
+    -18.190725326538086,
+    -18.18677520751953,
+    -18.178802490234375,
+    -18.16695785522461
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     2.46106,
+     2.46106,
+     2.46106,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.47148,
+     2.47148,
+     2.47148,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.48183,
+     2.48183,
+     2.48183,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.49208,
+     2.49208,
+     2.49208,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.50225,
+     2.50225,
+     2.50225,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.51234,
+     2.51234,
+     2.51234,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.52235,
+     2.52235,
+     2.52235,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.53228,
+     2.53228,
+     2.53228,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.54214,
+     2.54214,
+     2.54214,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.55191,
+     2.55191,
+     2.55191,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     2.56162,
+     2.56162,
+     2.56162,
+     60.0,
+     60.0,
+     60.0
+    ]
+   ],
+   "V0": 11.421360980579394,
+   "E0": -18.191114768321203,
+   "B0_GPa": 435.4190497570463,
+   "B0_prime": 3.7835162098334347,
+   "fit_rms_meV_per_atom": 0.03989528849522683
+  }
+ ],
+ "n_atoms": 2,
+ "spacegroup_ref": 227,
+ "relaxed": false,
+ "V0_per_atom": 5.710680490289697,
+ "B0_GPa": 435.4190497570463,
+ "V_err_pct": 1.8582090482421654,
+ "a_eq_err_pct": 0.6156055377614766,
+ "B_err_pct": -4.240367328558103,
+ "a_pred": 3.5748620136107996,
+ "a_err_pct": 0.6153113878637706,
+ "wall_s": 21.13427006800157,
+ "median_fresh_singlepoint_ms": 1529.7811169984925,
+ "peak_rss_mb": 1509.61328125,
+ "n_volume_points": 11,
+ "model": "prophet",
+ "model_label": "Prophet OAME-MBD (KairosCalculator)"
+}

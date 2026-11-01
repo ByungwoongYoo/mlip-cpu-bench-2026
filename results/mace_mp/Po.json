@@ -1,0 +1,56 @@
+{
+ "solid": "Po",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Po",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "LEJ14-CIF cubic conv. cell (1 atoms)",
+  "build": "refs/lej2014/anc/Po.cif (cell scaled isotropically to V_ref)",
+  "cubic": true,
+  "a_ref": 3.3301,
+  "V_ref_per_atom": 36.93,
+  "B_ref": 27.4,
+  "n_atoms_cif": 1,
+  "source": "LEJ14",
+  "source_detail": "Lejaeghere et al., Crit. Rev. Solid State Mater. Sci. 39, 1 (2014), arXiv:1204.2733v5 SupplMat Tab. 2.2/2.3",
+  "correction": "V0: raw exp 37.43 A3/atom - thermal dV1 0.4 - zero-point dV2 0.1 = 36.93; B0: raw exp 26.0 GPa - dB1 (-1.28) - dB2 (-0.17) = 27.4 GPa"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "failed",
+ "passes": [],
+ "n_atoms": 1,
+ "spacegroup_ref": 221,
+ "relaxed": false,
+ "failure": "ValueError: np.int64(84) is not in list",
+ "traceback": "<venvs>/mace/lib/python3.12/site-packages/ase/atoms.py\", line 1971, in get_potential_energy\n    energy = self._calc.get_potential_energy(self)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/ase/calculators/abc.py\", line 25, in get_potential_energy\n    return self.get_property(name, atoms)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/ase/calculators/calculator.py\", line 517, in get_property\n    self.calculate(atoms, [name], system_changes)\n  File \"<venvs>/mace/lib/python3.12/site-packages/mace/calculators/mace.py\", line 723, in calculate\n    batch_base = self._atoms_to_batch(atoms)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/mace/calculators/mace.py\", line 618, in _atoms_to_batch\n    real_graph = mace_data.AtomicData.from_config(\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/mace/data/atomic_data.py\", line 200, in from_config\n    indices = atomic_numbers_to_indices(config.atomic_numbers, z_table=z_table)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/mace/tools/utils.py\", line 122, in atomic_numbers_to_indices\n    return to_index_fn(atomic_numbers)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py\", line 2530, in __call__\n    return self._call_as_normal(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py\", line 2523, in _call_as_normal\n    return self._vectorize_call(func=func, args=vargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py\", line 2608, in _vectorize_call\n    ufunc, otypes = self._get_ufunc_and_otypes(func=func, args=args)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py\", line 2568, in _get_ufunc_and_otypes\n    outputs = func(*inputs)\n              ^^^^^^^^^^^^^\n  File \"<venvs>/mace/lib/python3.12/site-packages/mace/tools/utils.py\", line 108, in z_to_index\n    return self.zs.index(atomic_number)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: np.int64(84) is not in list\n",
+ "wall_s": 0.013584233000074164,
+ "median_fresh_singlepoint_ms": null,
+ "singlepoint_error": "np.int64(84) is not in list",
+ "peak_rss_mb": 642.1484375,
+ "n_volume_points": 0,
+ "model": "mace_mp",
+ "model_label": "MACE-MP-0 medium (mace-torch, 2023-12-03 checkpoint)"
+}

@@ -1,0 +1,211 @@
+{
+ "solid": "Na",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Na",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 4.205,
+  "V_ref_per_atom": 37.1765,
+  "B_ref": 7.9,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 (if 0.8<V0/Vc<1.25) else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 37.1765,
+   "volumes": [
+    34.94591,
+    35.392027999999996,
+    35.838145999999995,
+    36.28426399999999,
+    36.730382,
+    37.1765,
+    37.622617999999996,
+    38.068736,
+    38.514854,
+    38.960972,
+    39.40709
+   ],
+   "energies": [
+    -3.5590991973876953,
+    -3.5598626136779785,
+    -3.5602588653564453,
+    -3.5603413581848145,
+    -3.5601587295532227,
+    -3.5597240924835205,
+    -3.55899715423584,
+    -3.5578935146331787,
+    -3.5572288036346436,
+    -3.5566415786743164,
+    -3.555891990661621
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     3.5673,
+     3.5673,
+     3.5673,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.58241,
+     3.58241,
+     3.58241,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.5974,
+     3.5974,
+     3.5974,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.61227,
+     3.61227,
+     3.61227,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.62701,
+     3.62701,
+     3.62701,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.64164,
+     3.64164,
+     3.64164,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.65615,
+     3.65615,
+     3.65615,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.67054,
+     3.67054,
+     3.67054,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.68482,
+     3.68482,
+     3.68482,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.699,
+     3.699,
+     3.699,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     3.71306,
+     3.71306,
+     3.71306,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 36.076324135417906,
+   "E0": -3.560412823791414,
+   "B0_GPa": 10.208040325731968,
+   "B0_prime": 20.16929316198837,
+   "fit_rms_meV_per_atom": 0.1124192530933951
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 36.076324135417906,
+ "B0_GPa": 10.208040325731968,
+ "V_err_pct": -2.95933147171491,
+ "a_eq_err_pct": -0.9963377444681343,
+ "B_err_pct": 29.215700325721116,
+ "a_pred": 4.163105581926997,
+ "a_err_pct": -0.9963000730797367,
+ "wall_s": 0.0526592520000122,
+ "median_fresh_singlepoint_ms": 4.655005999666173,
+ "peak_rss_mb": 585.78515625,
+ "n_volume_points": 11,
+ "model": "chgnet_r2scan",
+ "model_label": "matgl CHGNet-PES-MatPES-r2SCAN-1M-2026.9"
+}

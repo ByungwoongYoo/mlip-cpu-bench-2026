@@ -1,0 +1,211 @@
+{
+ "solid": "AlP",
+ "cls": "semiconductor",
+ "oxide": false,
+ "ref": {
+  "name": "AlP",
+  "cls": "semiconductor",
+  "oxide": false,
+  "structure": "zincblende",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 5.451,
+  "V_ref_per_atom": 20.246,
+  "B_ref": 87.4,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 40.492,
+   "volumes": [
+    38.062479999999994,
+    38.548384,
+    39.034288,
+    39.520191999999994,
+    40.006096,
+    40.492,
+    40.977903999999995,
+    41.463808,
+    41.949712,
+    42.435615999999996,
+    42.92152
+   ],
+   "energies": [
+    -10.708560079336166,
+    -10.72419348359108,
+    -10.735660254955292,
+    -10.743238985538483,
+    -10.747184216976166,
+    -10.747728496789932,
+    -10.745083510875702,
+    -10.739444553852081,
+    -10.730991750955582,
+    -10.719889163970947,
+    -10.706291407346725
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     3.77576,
+     3.77576,
+     3.77576,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.79176,
+     3.79176,
+     3.79176,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.80762,
+     3.80762,
+     3.80762,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.82336,
+     3.82336,
+     3.82336,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.83896,
+     3.83896,
+     3.83896,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.85444,
+     3.85444,
+     3.85444,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.8698,
+     3.8698,
+     3.8698,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.88503,
+     3.88503,
+     3.88503,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.90015,
+     3.90015,
+     3.90015,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.91515,
+     3.91515,
+     3.91515,
+     60.0,
+     60.0,
+     60.0
+    ],
+    [
+     3.93004,
+     3.93004,
+     3.93004,
+     60.0,
+     60.0,
+     60.0
+    ]
+   ],
+   "V0": 40.32856672005303,
+   "E0": -10.747923825609988,
+   "B0_GPa": 89.36519235667888,
+   "B0_prime": 4.329430746353383,
+   "fit_rms_meV_per_atom": 0.005239328876809833
+  }
+ ],
+ "n_atoms": 2,
+ "spacegroup_ref": 216,
+ "relaxed": false,
+ "V0_per_atom": 20.164283360026516,
+ "B0_GPa": 89.36519235667888,
+ "V_err_pct": -0.4036186899806449,
+ "a_eq_err_pct": -0.13472097924432935,
+ "B_err_pct": 2.248503840593674,
+ "a_pred": 5.443659173084716,
+ "a_err_pct": -0.13466936186541378,
+ "wall_s": 0.331909241998801,
+ "median_fresh_singlepoint_ms": 150.91523099908954,
+ "peak_rss_mb": 475.87890625,
+ "n_volume_points": 11,
+ "model": "flashcart_mad",
+ "model_label": "FlashCart MAD (seed 0)"
+}

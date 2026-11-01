@@ -1,0 +1,211 @@
+{
+ "solid": "Ta",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Ta",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 3.298,
+  "V_ref_per_atom": 17.9358,
+  "B_ref": 202.7,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 (if 0.8<V0/Vc<1.25) else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 17.9358,
+   "volumes": [
+    16.859652,
+    17.0748816,
+    17.2901112,
+    17.5053408,
+    17.7205704,
+    17.9358,
+    18.1510296,
+    18.366259200000002,
+    18.581488800000002,
+    18.7967184,
+    19.011948
+   ],
+   "energies": [
+    -48.534786224365234,
+    -48.551795959472656,
+    -48.56541442871094,
+    -48.576114654541016,
+    -48.58381271362305,
+    -48.588478088378906,
+    -48.5904426574707,
+    -48.59041976928711,
+    -48.589111328125,
+    -48.5866813659668,
+    -48.582481384277344
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     2.79784,
+     2.79784,
+     2.79784,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.8097,
+     2.8097,
+     2.8097,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.82146,
+     2.82146,
+     2.82146,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.83311,
+     2.83311,
+     2.83311,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.84468,
+     2.84468,
+     2.84468,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.85615,
+     2.85615,
+     2.85615,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.86753,
+     2.86753,
+     2.86753,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.87882,
+     2.87882,
+     2.87882,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.89002,
+     2.89002,
+     2.89002,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.90114,
+     2.90114,
+     2.90114,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     2.91217,
+     2.91217,
+     2.91217,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 18.297809611726226,
+   "E0": -48.59087541794558,
+   "B0_GPa": 114.96650022440572,
+   "B0_prime": 11.593908228456165,
+   "fit_rms_meV_per_atom": 0.2800830795715841
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 18.297809611726226,
+ "B0_GPa": 114.96650022440572,
+ "V_err_pct": 2.0183633388319855,
+ "a_eq_err_pct": 0.6683114281366587,
+ "B_err_pct": -43.28243698845302,
+ "a_pred": 3.320037838377372,
+ "a_err_pct": 0.668218264929421,
+ "wall_s": 0.16305492100036645,
+ "median_fresh_singlepoint_ms": 7.3124110003846,
+ "peak_rss_mb": 585.91015625,
+ "n_volume_points": 11,
+ "model": "chgnet_r2scan",
+ "model_label": "matgl CHGNet-PES-MatPES-r2SCAN-1M-2026.9"
+}

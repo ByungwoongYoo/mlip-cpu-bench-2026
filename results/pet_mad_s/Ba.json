@@ -1,0 +1,211 @@
+{
+ "solid": "Ba",
+ "cls": "metal",
+ "oxide": false,
+ "ref": {
+  "name": "Ba",
+  "cls": "metal",
+  "oxide": false,
+  "structure": "bcc",
+  "build": "ase.build.bulk",
+  "cubic": true,
+  "a_ref": 4.994,
+  "V_ref_per_atom": 62.2753,
+  "B_ref": 10.6,
+  "source": "TSB16",
+  "source_detail": "Tran, Stelzl, Blaha, JCP 144, 204120 (2016); CMR uafd lattice_constants.csv & bulk_moduli.csv column 'Expt.'",
+  "correction": "as published: experimental values corrected for thermal expansion and zero-point vibrations (paper Sec. II, Refs. 43,75); no further correction applied here"
+ },
+ "settings": {
+  "n_volumes": 11,
+  "vol_range": [
+   0.94,
+   1.06
+  ],
+  "recentre_tol": 0.03,
+  "max_passes": 3,
+  "recentre_rule": "if |V0/Vc-1|>3% (or fit failed) re-sample around V0 if the fit is sane (B0>0 and V0 within 10% of the sampled range), else around the lowest-energy grid point",
+  "eos": "birchmurnaghan (ase.eos)",
+  "relax": {
+   "optimizer": "BFGS",
+   "fmax_eV_per_A": 0.005,
+   "max_steps": 300,
+   "cell_filter": "FrechetCellFilter(constant_volume=True)",
+   "symmetry": "FixSymmetry(symprec=1e-3)",
+   "applied_when": "cell has free shape or internal DOF"
+  },
+  "kpoints": "none (MLIP)",
+  "spin": "none (models are spin-unaware)",
+  "dtype": "float64 where supported"
+ },
+ "status": "ok",
+ "passes": [
+  {
+   "pass_": 1,
+   "V_centre": 62.2753,
+   "volumes": [
+    58.538782,
+    59.2860856,
+    60.0333892,
+    60.7806928,
+    61.5279964,
+    62.2753,
+    63.022603600000004,
+    63.769907200000006,
+    64.5172108,
+    65.26451440000001,
+    66.011818
+   ],
+   "energies": [
+    -1.9848847389221191,
+    -1.9874590635299683,
+    -1.9894866943359375,
+    -1.9909974336624146,
+    -1.9920241832733154,
+    -1.9926021099090576,
+    -1.9927695989608765,
+    -1.9925636053085327,
+    -1.9919769763946533,
+    -1.9909288883209229,
+    -1.9893708229064941
+   ],
+   "relax_steps": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "relax_converged": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "cellpars": [
+    [
+     4.23664,
+     4.23664,
+     4.23664,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.25459,
+     4.25459,
+     4.25459,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.2724,
+     4.2724,
+     4.2724,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.29005,
+     4.29005,
+     4.29005,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.30756,
+     4.30756,
+     4.30756,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.32493,
+     4.32493,
+     4.32493,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.34216,
+     4.34216,
+     4.34216,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.35926,
+     4.35926,
+     4.35926,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.37622,
+     4.37622,
+     4.37622,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.39305,
+     4.39305,
+     4.39305,
+     109.47122,
+     109.47122,
+     109.47122
+    ],
+    [
+     4.40976,
+     4.40976,
+     4.40976,
+     109.47122,
+     109.47122,
+     109.47122
+    ]
+   ],
+   "V0": 62.94859833527179,
+   "E0": -1.992822124284035,
+   "B0_GPa": 7.645595126640407,
+   "B0_prime": 2.0010096904037185,
+   "fit_rms_meV_per_atom": 0.043810642822385906
+  }
+ ],
+ "n_atoms": 1,
+ "spacegroup_ref": 229,
+ "relaxed": false,
+ "V0_per_atom": 62.94859833527179,
+ "B0_GPa": 7.645595126640407,
+ "V_err_pct": 1.081164338464502,
+ "a_eq_err_pct": 0.35909706229277916,
+ "B_err_pct": -27.871744088298044,
+ "a_pred": 5.011934114991207,
+ "a_err_pct": 0.35911323570698706,
+ "wall_s": 0.24260818800030393,
+ "median_fresh_singlepoint_ms": 26.06195600128558,
+ "peak_rss_mb": 928.21875,
+ "n_volume_points": 11,
+ "model": "pet_mad_s",
+ "model_label": "UPET pet-mad-s (latest)"
+}
