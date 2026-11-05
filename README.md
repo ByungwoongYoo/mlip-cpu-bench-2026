@@ -1,5 +1,7 @@
 # MLIP CPU benchmark 2026: equation of state vs corrected experiment
 
+Updates: [@woongworks on X](https://x.com/woongworks)
+
 Five machine-learned interatomic potentials, run on 2 CPU cores, fitted to a third-order Birch–Murnaghan
 equation of state on 70 solids. The equilibrium volume, expressed as a volume-equivalent lattice constant *a*,
 and the bulk modulus *B* are compared with experimental values corrected to the static-lattice limit
