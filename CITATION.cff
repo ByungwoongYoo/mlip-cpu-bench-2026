@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below, and cite TSB16 and LEJ14 for the reference data."
+title: "mlip-cpu-bench-2026: equation-of-state benchmark of five universal MLIPs on 70 solids (2-core CPU)"
+authors:
+  - family-names: Yoo
+    given-names: Byungwoong
+type: software
+license: MIT
+repository-code: "https://github.com/ByungwoongYoo/mlip-cpu-bench-2026"
+date-released: 2026-11-05
+keywords: [machine-learning interatomic potentials, MACE-MP-0, CHGNet, PET-MAD, equation of state, bulk modulus, benchmark]
+references:
+  - type: article
+    title: "Rungs 1 to 4 of DFT Jacob's ladder: Extensive test on the lattice constant, bulk modulus, and cohesive energy of solids"
+    authors: [{family-names: Tran, given-names: F.}, {family-names: Stelzl, given-names: J.}, {family-names: Blaha, given-names: P.}]
+    journal: "J. Chem. Phys."
+    volume: 144
+    start: 204120
+    year: 2016
+  - type: article
+    title: "Error estimates for solid-state density-functional theory predictions: an overview by means of the ground-state elemental crystals"
+    authors: [{family-names: Lejaeghere, given-names: K.}]
+    journal: "Crit. Rev. Solid State Mater. Sci."
+    volume: 39
+    start: 1
+    year: 2014
+# doi: 10.5281/zenodo.XXXXXXX  (fill after Zenodo release)

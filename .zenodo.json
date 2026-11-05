@@ -1,0 +1,13 @@
+{
+  "title": "mlip-cpu-bench-2026: equation-of-state benchmark of five universal MLIPs on 70 solids (2-core CPU)",
+  "upload_type": "software",
+  "creators": [{"name": "Yoo, Byungwoong", "affiliation": "BigWonder"}],
+  "description": "Third-order Birch-Murnaghan E(V) fits for CHGNet-r2SCAN-2026.9 (matgl), PET-MAD-s (upet), MACE-MP-0 medium, Prophet-OAME-MBD and FlashCart-MAD on 70 solids (44 TSB16 cubic + 26 LEJ14 elements), CPU only, 2 cores, 3000 MB RSS cap. Code, per-solid results, logs and charts. Model weights are not included and keep their own licences; reference data from TSB16 and LEJ14.",
+  "license": "MIT",
+  "keywords": ["MLIP", "MACE-MP-0", "CHGNet", "PET-MAD", "equation of state", "bulk modulus", "benchmark", "CPU"],
+  "related_identifiers": [
+    {"identifier": "https://github.com/ByungwoongYoo/mlip-cpu-bench-2026", "relation": "isSupplementTo", "scheme": "url"},
+    {"identifier": "10.1063/1.4948636", "relation": "references", "scheme": "doi"},
+    {"identifier": "arXiv:1204.2733", "relation": "references", "scheme": "arxiv"}
+  ]
+}
